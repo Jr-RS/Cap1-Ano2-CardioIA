@@ -24,24 +24,27 @@ O objetivo desta fase é realizar a curadoria, coleta e exploração inicial de 
 A abordagem prioriza reprodutibilidade e transparência, com Google Colaboratory Notebooks para executar downloads, carregamentos e visualizações. A pasta `docs/` contém um estudo aprofundado (“CardioIA_ Coleta e Preparação de Dados.docx”) que fundamenta as escolhas técnicas e clínicas desta fase.
 
 ### Parte 1 – Dados Numéricos (IoT)
+[![Open in Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/Jr-RS/Cap1-Ano2-CardioIA/blob/main/notebooks/1_dados_numericos.ipynb)
 - Fonte: "Cardiovascular Disease dataset" (Kaggle) — https://www.kaggle.com/datasets/sulianova/cardiovascular-disease-dataset
 - Justificativa: Dados reais com 70.000 registros adequados para análises clínicas e modelagem preditiva. Variáveis-chave: ap_hi (pressão sistólica), ap_lo (pressão diastólica), cholesterol e age. Hipertensão e dislipidemia são fatores críticos para DCV; idade é um fator não modificável central. Essas variáveis são essenciais para estratificação de risco e priorização de intervenções.
 - Entregável: Notebook do Colab que realiza download via Kaggle, carrega com pandas e executa EDA básica (head/info/describe).
-- Abrir no Colab: https://colab.research.google.com/github/SEU_USUARIO_GIT/Cap1-Ano2-CardioIA/blob/main/notebooks/1_dados_numericos.ipynb
+- Abrir no Colab: https://colab.research.google.com/github/Jr-RS/Cap1-Ano2-CardioIA/blob/main/notebooks/1_dados_numericos.ipynb
 
 ### Parte 2 – Dados Textuais (NLP)
+[![Open in Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/Jr-RS/Cap1-Ano2-CardioIA/blob/main/notebooks/2_dados_textuais.ipynb)
 - Fonte: "Diretriz Brasileira de Insuficiência Cardíaca Crônica e Aguda" — http://publicacoes.cardiol.br/portal/abc/portugues/2018/v11103/diretriz-brasileira-de-insuficiencia-cardiaca-cronica-e-aguda_pdf.html
 - Justificativa: Diretrizes clínicas são ideais para NLP: permitem Reconhecimento de Entidades Nomeadas (medicamentos, sintomas, comorbidades), construção de Grafos de Conhecimento (relações medicamento–doença–conduta) e sumarização automática para apoio à decisão. Esse pipeline textual alimenta o “cérebro” do CardioIA e viabiliza um assistente clínico em fases futuras.
 - Entregável: Notebook do Colab que baixa o PDF, extrai o texto com pdfplumber, exibe os primeiros 2000 caracteres e salva o conteúdo completo em `docs/diretriz_brasileira_ic.txt`.
-- Abrir no Colab: https://colab.research.google.com/github/SEU_USUARIO_GIT/Cap1-Ano2-CardioIA/blob/main/notebooks/2_dados_textuais.ipynb
+- Abrir no Colab: https://colab.research.google.com/github/Jr-RS/Cap1-Ano2-CardioIA/blob/main/notebooks/2_dados_textuais.ipynb
 
 ### Parte 3 – Dados Visuais (VC)
+[![Open in Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/Jr-RS/Cap1-Ano2-CardioIA/blob/main/notebooks/3_dados_visuais.ipynb)
 - Fonte: "ECG Arrhythmia Image Dataset" (Kaggle), derivado do MIT-BIH — https://www.kaggle.com/datasets/erhmrai/ecg-image-data
 - Justificativa: Imagens de ECG são ideais para CNNs, possibilitando classificação de arritmias (ex.: normal, supraventricular, ventricular) e detecção de anomalias. Essa trilha dá origem ao módulo de diagnóstico automatizado nas próximas fases, aumentando eficiência e precisão.
 - Entregável: Notebook do Colab que baixa o dataset do Kaggle e exibe exemplos de cada classe detectada.
-- Abrir no Colab: https://colab.research.google.com/github/SEU_USUARIO_GIT/Cap1-Ano2-CardioIA/blob/main/notebooks/3_dados_visuais.ipynb
+- Abrir no Colab: https://colab.research.google.com/github/Jr-RS/Cap1-Ano2-CardioIA/blob/main/notebooks/3_dados_visuais.ipynb
 
-> Dica: após publicar no GitHub, substitua `SEU_USUARIO_GIT` pelo seu usuário para que os links funcionem.
+
 
 
 ## 📁 Estrutura de pastas
@@ -81,6 +84,7 @@ Você pode optar por executar via Google Colab (recomendado nesta fase) ou local
 
 2) Execução local (opcional)
 - Requisitos: Python 3.10+ e pip. Abra os notebooks com Jupyter/VS Code.
+- Instale dependências: `pip install -r requirements.txt`.
 - Configure credenciais do Kaggle: crie `%USERPROFILE%/.kaggle/kaggle.json` com `{ "username": "SEU_USER", "key": "SUA_KEY" }` ou exporte variáveis de ambiente.
 - Execute as células conforme instruções de cada notebook.
 

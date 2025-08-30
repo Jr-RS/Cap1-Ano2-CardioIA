@@ -1,0 +1,14 @@
+# Data and downloads
+/data/
+notebooks/data/
+**/.ipynb_checkpoints/
+
+# Python
+__pycache__/
+*.pyc
+.env
+.venv/
+
+# OS
+.DS_Store
+Thumbs.db
