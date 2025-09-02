@@ -17,7 +17,7 @@
 
 ## 📜 Descrição
 
-Este repositório documenta a Fase 1, "Batimentos de Dados", do projeto acadêmico CardioIA.
+Este repositório documenta a Fase 1, "Batimentos de Dados", do projeto CardioIA.
 
 O objetivo desta fase é realizar a curadoria, coleta e exploração inicial de três tipos de dados cardiológicos: numéricos (IoT/prontuário), textuais (diretrizes) e visuais (imagens de ECG). Essa base de dados sustentará as próximas fases do projeto, incluindo modelagem, construção de APIs e aplicação para suporte à decisão clínica.
 
